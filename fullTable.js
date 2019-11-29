@@ -10,7 +10,7 @@ const client = new Client({
 
 client.connect()
 .then(() => console.log('Connection Successfully'))
-.then(() => client.query('select * from shop where name = $1', ['Kariakoo']))
+.then(() => client.query('select * from shop'))
 .then(results => console.table(results.rows))
 .catch(e => console.log(e))
 .finally(() => client.end());
