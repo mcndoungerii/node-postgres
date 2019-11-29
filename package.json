@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node index.js",
     "fulltable": "node fulltable.js",
-    "asyncFullTable": "node asyncFullTable.js"
+    "asyncFullTable": "node asyncFullTable.js",
+    "tx": "node tx.js"
   },
   "keywords": [],
   "author": "Allen Mwandunga",

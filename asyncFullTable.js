@@ -13,16 +13,16 @@ async function execute() {
     try {
         await client.connect();
         console.log('Connection Successfully');
-        await client.query('insert into employee values ($1,$2)',[1,'Roberto'])
-        const results = await client.query('select * from employee');
-        console.table(results.rows);
+        // await client.query('insert into employee values ($1,$2)',[6,'Roberto'])
+        const {rows} = await client.query('select * from employee');
+        console.table(rows);
     }
     catch(e) {
-        console.log(`SOmething Wrong happened ${e}`)
+        console.log(`Something Wrong happened ${e}`)
     }
     finally {
         await client.end();
-    console.log('Connection disconnected');
+        console.log('Connection disconnected');
     }
     
     
