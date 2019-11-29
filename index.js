@@ -5,10 +5,12 @@ const client = new Client({
     password: "0754684494",
     host: "localhost",
     port: 5432,
-    database:"node_express"
+    database:"duka_server"
 });
 
 client.connect()
 .then(() => console.log('Connection Successfully'))
+.then(() => client.query('select * from shop'))
+.then(results => console.table(results.rows))
 .catch(e => console.log(e))
 .finally(() => client.end());
