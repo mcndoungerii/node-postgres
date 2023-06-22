@@ -13,6 +13,6 @@
   "author": "Allen Mwandunga",
   "license": "ISC",
   "dependencies": {
-    "pg": "^7.14.0"
+    "pg": "^8.11.0"
   }
 }
